@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>homework</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            background-color: gainsboro;
+            font-size: 15px;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100vh;
+        }
+        
+        .container {
+            border: 2px solid gray;
+            padding: 10px;
+        }
+        
+        .btn {
+            width: 30px;
+            height: 30px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        
+        .in {
+            width: 135px;
+            height: 20px;
+            margin-bottom: 5px;
+            padding: 0 5px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="container">
+        <input type="text" class="in" id="input">
+        <br>
+        <button class="btn" onclick="num1()">1</button>
+        <button class="btn" onclick="num2()">2</button>
+        <button class="btn" onclick="num3()">3</button>
+        <button class="btn" onclick="sum()">+</button>
+        <br>
+        <button class="btn" onclick="num4()">4</button>
+        <button class="btn" onclick="num5()">5</button>
+        <button class="btn" onclick="num6()">6</button>
+        <button class="btn" onclick="sub()">-</button>
+        <br>
+        <button class="btn" onclick="num7()">7</button>
+        <button class="btn" onclick="num8()">8</button>
+        <button class="btn" onclick="num9()">9</button>
+        <button class="btn" onclick="mul()">x</button>
+        <br>
+        <button class="btn" onclick="div()">&divide;</button>
+        <button class="btn" onclick="num0()">0</button>
+        <button class="btn" onclick="result()">=</button>
+        <button class="btn" onclick="c()">C</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
