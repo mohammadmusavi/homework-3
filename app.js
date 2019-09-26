@@ -1,7 +1,7 @@
 var val = document.getElementById('input');
 var val_1 = 0;
 var val_2 = 0;
-var operators = ["+", '-', 'x', '÷'];
+var operators = ["+", '-', 'x', '/'];
 var op;
 
 function c() {
@@ -49,27 +49,50 @@ function num0() {
 }
 
 function sum() {
-    val_1 = 0;
-    val_1 = Number(val.value);
+    // val_1 = 0;
+    // val_1 = Number(val.value);
     val.value += '+';
 }
 
 function sub() {
-    val_1 = 0;
-    val_1 = Number(val.value);
+    // val_1 = 0;
+    // val_1 = Number(val.value);
     val.value += '-';
 }
 
 function mul() {
-    val_1 = 0;
-    val_1 = Number(val.value);
+    // val_1 = 0;
+    // val_1 = Number(val.value);
     val.value += 'x';
 }
 
 function div() {
+    // val_1 = 0;
+    // val_1 = Number(val.value);
+    val.value += '/';
+}
+
+function cal_val_1(b) {
     val_1 = 0;
-    val_1 = Number(val.value);
-    val.value += '÷';
+    var arr = Array.prototype.slice.call(b);
+    var states = -1;
+    var number = 0;
+    for (var i = 0; i < 4; i++) {
+        states = arr.indexOf(operators[i]);
+        if (states != -1) {
+            op = i;
+            break;
+        }
+    }
+    number = arr.splice(0, (states));
+    number.reverse();
+    for (var j = 0; j < number.length; j++)
+        number[j] = Number(number[j]);
+    for (j = 0; j < number.length; j++)
+        for (i = 0; i < j; i++)
+            number[j] *= 10;
+    for (j = 0; j < number.length; j++)
+        val_1 += number[j];
 }
 
 function cal_val_2(a) {
@@ -96,7 +119,7 @@ function cal_val_2(a) {
 }
 
 function result() {
-
+    cal_val_1(val.value);
     cal_val_2(val.value);
 
     if (op == 0) val.value += " = " + (val_1 + val_2);
