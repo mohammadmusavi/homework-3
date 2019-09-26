@@ -1,7 +1,7 @@
 var val = document.getElementById('input');
 var val_1 = 0;
 var val_2 = 0;
-var operators = ["+", '-', 'x', '/'];
+var operators = ["+", '-', '*', '/'];
 var op;
 
 function c() {
@@ -49,26 +49,18 @@ function num0() {
 }
 
 function sum() {
-    // val_1 = 0;
-    // val_1 = Number(val.value);
     val.value += '+';
 }
 
 function sub() {
-    // val_1 = 0;
-    // val_1 = Number(val.value);
     val.value += '-';
 }
 
 function mul() {
-    // val_1 = 0;
-    // val_1 = Number(val.value);
-    val.value += 'x';
+    val.value += '*';
 }
 
 function div() {
-    // val_1 = 0;
-    // val_1 = Number(val.value);
     val.value += '/';
 }
 
